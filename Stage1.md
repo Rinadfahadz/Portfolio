@@ -11,3 +11,16 @@ Frontend Developer and QA Builds the farm dashboard and consumers , and connects
 
 Data & Documentation Owner
 Prepares simple sample data and keeps project documents and reports up to date. Rinad&afnan
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Research and Brainstorming
+Each member researched ideas based on personal interests and real-world needs.
+
+The team gathered feedback from people about daily challenges and reviewed YouTube projects for inspiration.
+
+Brainstorming Sessions
+March 9 : Initial idea generation
+March 11 : Filtering and evaluation
+Techniques Used
+Open brainstorming
+Listing pros/cons for each idea
+"How Might We..." questions to discover innovation angles
