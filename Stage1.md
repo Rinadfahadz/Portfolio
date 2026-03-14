@@ -52,6 +52,7 @@ Strengths: Realistic and achievable scope, offering a well-balanced combination 
 Decision: Chosen as the official MVP for development.
 
 3) Decision and Refinement
+   ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Final MVP: Coffee Gift Platform – Connecting Individuals Directly with Cafes
 
@@ -106,6 +107,7 @@ Build a unique, social gifting experience with potential viral growth
 Enhance personalization through optional music gifting
 
 4) Idea Development Documentation
+   ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 All idea stages documented in Google Docs (brainstorming, pros/cons, team discussions, final decisions)
 
