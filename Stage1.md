@@ -43,9 +43,9 @@ A web app simulating drone delivery routes and services.
 Strengths: Visually appealing and technically interesting.
 Rejected Because: Users may assume real drone usage; not strongly connected to daily needs.
 
-Idea 3 – Coffe website gifts
+Idea 3 – Coffe website gifts & subscription
 
-A web-based platform that directly connects users with local cafes to send and receive coffee gifts.
+A web-based platform that directly connects users with local cafes to send, receive coffee gifts and subscribe.
 
 Strengths: Realistic and achievable scope, offering a well-balanced combination of frontend, backend, and analytics features.
 
@@ -54,21 +54,21 @@ Decision: Chosen as the official MVP for development.
 3) Decision and Refinement
    ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Final MVP: Coffee Gift Platform – Connecting Individuals Directly with Cafes
+Final MVP: Coffee Gift Platform – Subscription-Based Gifting Directly from Cafes
 
-Problem
-
-People often want to give small, thoughtful gifts like coffee, but current methods (cash transfers, coupons, or direct visits) are inefficient, impersonal, and lack a seamless experience for both the giver and the receiver.
-
+Problem:
+People often want to enjoy or give small, thoughtful gifts like coffee, but current methods (cash transfers, coupons, or direct visits) are inefficient, impersonal, and lack a seamless experience. There is also a growing need for subscription-based coffee, allowing users to receive or send coffee regularly, maintain meaningful connections over time if gifting, and create consistent engagement either for themselves or with others. Subscription plans also help cafes predict demand and encourage regular platform use.
 Target Audience
 
-Individuals who want to send coffee gifts to friends, family, or strangers
+Individuals who want to send recurring coffee gifts through subscription plans to friends, family, or strangers
 
-Cafes looking to increase engagement and sales through direct consumer interactions
+Users who want to combine gifting with personalization, such as messages or optional songs
+
+Cafes looking to increase engagement and sales through direct, subscription-driven interactions with consumers
 
 Key Features (MVP)
 
-For Cafes
+For Cafes:
 
 Register and manage available drinks
 
@@ -76,35 +76,39 @@ Set daily availability or capacity
 
 View simple analytics on popular drinks and gift activity
 
-For Users
+For Users:
 
-Browse available drinks from nearby cafes
+Browse available drinks from cafes
 
-Send coffee gifts directly to recipients (with optional message)
+Send coffee gifts directly to recipients (one-time or subscription-based)
 
 Track order status and QR code redemption
 
 Optional: Attach a song to the coffee gift for a personalized touch
 
+Subscription plans: Monthly packages of coffee gifts with flexible quantities for recurring sending
+
 Enhancements Discussed
 
-Enable “Pay it Forward” or anonymous coffee gifting
+Support anonymous or “Pay it Forward” coffee gifts, with the giver being notified when their gift is received
 
 Keep analytics minimal in MVP
 
 Ensure mobile-friendly, simple UI
 
-Add a story-sharing feature to increase engagement
+Add story-sharing features to increase engagement
 
 Expected Outcomes
 
-Create a seamless platform for sending and receiving coffee gifts
+Establish a recurring gifting experience through subscriptions
 
 Increase cafe visibility and direct consumer interaction
 
-Build a unique, social gifting experience with potential viral growth
+Build a unique, social gifting platform with potential viral growth
 
-Enhance personalization through optional music gifting
+Enhance personalization with optional music and messages
+
+Encourage predictable revenue and frequent engagement via subscription-based gifting
 
 4) Idea Development Documentation
    ------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -113,4 +117,4 @@ All idea stages documented in Google Docs (brainstorming, pros/cons, team discus
 
 Final MVP summary includes rationale, key features, optional enhancements, and expected impact
 
-Clear documentation of team workflow to ensure smooth collaboration and
+Clear documentation of team workflow to ensure smooth collaboration
