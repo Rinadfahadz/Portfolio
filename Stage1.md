@@ -1,4 +1,5 @@
 0) Team Formation
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------
 First Meeting: 11 March – On-site at Holberton Campus, 2:30 pm
 Communication: WhatsApp group for daily coordination + weekly in‑person meetings
 👥 Team Members & Roles
@@ -11,8 +12,10 @@ Frontend Developer and QA Builds the farm dashboard and consumers , and connects
 
 Data & Documentation Owner
 Prepares simple sample data and keeps project documents and reports up to date. Rinad&afnan
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 1) Research and Brainstorming
+   ------------------------------------------------------------------------------------------------------------------------------------------------------------
 Each member researched ideas based on personal interests and real-world needs.
 
 The team gathered feedback from people about daily challenges and reviewed YouTube projects for inspiration.
