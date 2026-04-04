@@ -1,4 +1,4 @@
-# 📘 Project Charter
+# Project Charter
 
 ## Project Information
 - **Project Name:** Hackathon Team Formation Platform  
