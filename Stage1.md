@@ -77,6 +77,9 @@ Teams searching for members with specific skills (e.g., frontend, backend, desig
 Students and beginner developers who lack strong professional networks
 
 Hackathon participants who want a faster and more organized team formation process
+
+key features
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------
 For Users:
 
 Create a profile including skills, preferred role, and experience level
