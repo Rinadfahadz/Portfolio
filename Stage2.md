@@ -1,14 +1,14 @@
 # 📘 Project Charter
 
-## 📌 Project Information
+## Project Information
 - **Project Name:** Hackathon Team Formation Platform  
 - **Stage:** Stage 2 – Project Charter  
 - **Team Members:** Rinad, Afnan, Sarah  
-- **Date:** March 2026  
+- **Date:** April 2026  
 
 ---
 
-## 🎯 1. Project Objectives
+## 1. Project Objectives
 
 ### Purpose
 The purpose of this project is to develop a web-based platform that helps hackathon participants form teams efficiently based on skills, roles, and interests, while ensuring trust through an idea protection system.
@@ -20,7 +20,7 @@ The purpose of this project is to develop a web-based platform that helps hackat
 
 ---
 
-## 👥 2. Stakeholders and Roles
+## 2. Stakeholders and Roles
 
 ### Stakeholders
 - **Internal:** Project team, instructors  
@@ -34,7 +34,7 @@ The purpose of this project is to develop a web-based platform that helps hackat
 
 ---
 
-## 📦 3. Project Scope
+## 3. Project Scope
 
 ### ✅ In Scope
 - User registration and profiles  
@@ -53,7 +53,7 @@ The purpose of this project is to develop a web-based platform that helps hackat
 
 ---
 
-## ⚠️ 4. Risks and Mitigation
+## 4. Risks and Mitigation
 
 | Risk | Mitigation |
 |------|-----------|
@@ -65,7 +65,7 @@ The purpose of this project is to develop a web-based platform that helps hackat
 
 ---
 
-## 🗺️ 5. High-Level Plan
+## 5. High-Level Plan
 
 ### Timeline
 
@@ -79,7 +79,7 @@ The purpose of this project is to develop a web-based platform that helps hackat
 
 ---
 
-## ✅ 6. Success Criteria
+## 6. Success Criteria
 - MVP is completed on time  
 - Users can create/join teams successfully  
 - Matching system works correctly  
@@ -87,6 +87,6 @@ The purpose of this project is to develop a web-based platform that helps hackat
 
 ---
 
-## 📎 7. Notes
+## 7. Notes
 - This document serves as a reference for project planning and execution  
 - It will be updated if scope or timelines change  
