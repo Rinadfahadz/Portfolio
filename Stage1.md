@@ -43,73 +43,134 @@ A web app simulating drone delivery routes and services.
 Strengths: Visually appealing and technically interesting.
 Rejected Because: Users may assume real drone usage; not strongly connected to daily needs.
 
-Idea 3 – Coffe website gifts & subscription
+Idea 3 – Hackathon Team Formation Platform
 
-A web-based platform that directly connects users with local cafes to send, receive coffee gifts and subscribe.
+A web-based platform that connects individuals and teams participating in Hackathon to form balanced teams based on skills, roles, and interests.
 
-Strengths: Realistic and achievable scope, offering a well-balanced combination of frontend, backend, and analytics features.
+Strengths:
+
+Solves a real and common problem faced by participants
+
+Highly relevant to students and developers
+
+Easy to understand and use
+
+Achievable within MVP scope with clear backend and frontend features
 
 Decision: Chosen as the official MVP for development.
 
 3) Decision and Refinement
    ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Final MVP: Coffee Gift Platform – Subscription-Based Gifting Directly from Cafes
+Final MVP: Hackathon Team Formation Platform
 
-Problem:
-People often want to enjoy or give small, thoughtful gifts like coffee, but current methods (cash transfers, coupons, or direct visits) are inefficient, impersonal, and lack a seamless experience. There is also a growing need for subscription-based coffee, allowing users to receive or send coffee regularly, maintain meaningful connections over time if gifting, and create consistent engagement either for themselves or with others. Subscription plans also help cafes predict demand and encourage regular platform use.
-Target Audience
+Problem
 
-Individuals who want to send recurring coffee gifts through subscription plans to friends, family, or strangers
+Many participants in Hackathon face challenges when trying to form or join teams. Individuals often struggle to find teammates with compatible skills, while existing teams may have difficulty filling missing roles. Current methods—such as messaging groups or personal networks—are often inefficient, unstructured, and time-consuming. This leads to delays, unbalanced teams, and reduced productivity during the limited time of the hackathon.
 
-Users who want to combine gifting with personalization, such as messages or optional songs
+Target Audience:
 
-Cafes looking to increase engagement and sales through direct, subscription-driven interactions with consumers
+Individuals looking to join a team during hackathons
 
-Key Features (MVP)
+Teams searching for members with specific skills (e.g., frontend, backend, design)
 
-For Cafes:
+Students and beginner developers who lack strong professional networks
 
-Register and manage available drinks
-
-Set daily availability or capacity
-
-View simple analytics on popular drinks and gift activity
-
+Hackathon participants who want a faster and more organized team formation process
 For Users:
 
-Browse available drinks from cafes
+Create a profile including skills, preferred role, and experience level
 
-Send coffee gifts directly to recipients (one-time or subscription-based)
+Browse available teams or other participants
 
-Track order status and QR code redemption
+Send requests to join teams or accept invitations
 
-Optional: Attach a song to the coffee gift for a personalized touch
+Indicate availability and areas of interest
 
-Subscription plans: Monthly packages of coffee gifts with flexible quantities for recurring sending
+For Teams:
+
+Create a team with defined roles and requirements
+
+Manage incoming join requests (accept/reject)
+
+View team members and track team composition
+
+Matching System:
+
+Suggest teams or members based on:
+
+Skills
+
+Roles
+
+Experience level
+
+Enable faster and more efficient team formation
+
+ Core Differentiator: Idea Protection & Trust System
+
+Unlike traditional team formation methods in Hackathon, this platform introduces a built-in Idea Protection System designed to create a safe and trustworthy collaboration environment.
+
+Key Capabilities:
+
+Timestamped Idea Logging:
+All shared ideas within chats are automatically time-stamped, creating a verifiable record of ownership
+
+Conversation History Tracking:
+Secure storage of discussions between team members to ensure transparency and accountability
+
+Idea Sharing with Attribution:
+Ideas shared within teams are linked to their original contributor
+
+Reporting & Dispute System:
+Users can report suspected idea theft, with access to conversation logs as supporting evidence
+
+Basic Moderation Layer:
+Admin-level review to handle disputes and maintain fairness within the platform
+
+💡 Value Proposition
+
+This feature addresses a common but often overlooked concern:
+
+hesitation to share ideas with strangers due to fear of theft
+
+By providing traceability, accountability, and reporting mechanisms, the platform:
+
+Encourages open collaboration
+
+Builds trust among participants
+
+Differentiates itself from informal tools like Telegram or Discord
 
 Enhancements Discussed
 
-Support anonymous or “Pay it Forward” coffee gifts, with the giver being notified when their gift is received
+Real-time chat or integration with messaging platforms
 
-Keep analytics minimal in MVP
+Rating and feedback system after hackathons
 
-Ensure mobile-friendly, simple UI
+“Quick Match” feature for instant team formation
 
-Add story-sharing features to increase engagement
+Integration with portfolios (e.g., GitHub)
+
+Notification system for new matches and requests
+
+Simple and mobile-friendly user interface
 
 Expected Outcomes
 
-Establish a recurring gifting experience through subscriptions
+Faster and smoother team formation process
 
-Increase cafe visibility and direct consumer interaction
+More balanced and skill-compatible teams
 
-Build a unique, social gifting platform with potential viral growth
+Reduced stress and time wasted at the beginning of hackathons
 
-Enhance personalization with optional music and messages
+Increased participation, especially for beginners
 
-Encourage predictable revenue and frequent engagement via subscription-based gifting
+Improved overall collaboration experience
 
+Stronger trust between users through built-in idea protection
+
+A unique competitive advantage over existing informal solutions
 4) Idea Development Documentation
    ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
