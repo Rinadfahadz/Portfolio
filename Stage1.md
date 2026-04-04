@@ -6,12 +6,12 @@ Communication: WhatsApp group for daily coordination + weekly in‑person meetin
 Project Coordinator / PM
 Organizes meetings, splits tasks, and tracks time and progress. Rinad&afnan
 
-Backend Developer and QA Designs the database and APIs, and implements product and order logic. Rinad&afnan
+Backend Developer and QA Designs the database and APIs, and implements product and order logic. Rinad
 
-Frontend Developer and QA Builds the farm dashboard and consumers , and connects them to the APIs. Rinad&afnan
+Frontend Developer and QA Builds the farm dashboard and consumers , and connects them to the APIs. afnan
 
 Data & Documentation Owner
-Prepares simple sample data and keeps project documents and reports up to date. Rinad&afnan
+Prepares simple sample data and keeps project documents and reports up to date. sarah
 
 
 1) Research and Brainstorming
