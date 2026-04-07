@@ -42,14 +42,15 @@ The purpose of this project is to develop a web-based platform that helps hackat
 - Browse users and teams  
 - Join request system  
 - Basic matching system  
-- Idea protection (timestamp + chat tracking)  
+- Idea protection (timestamp + chat tracking)
+- Full real-time chat
+- Rating system   
 
 ### ❌ Out of Scope
-- Advanced AI matching  
-- Full real-time chat  
+- Advanced AI matching   
 - Mobile app  
 - External integrations (GitHub, etc.)  
-- Rating system  
+   
 
 ---
 
