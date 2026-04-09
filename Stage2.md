@@ -27,7 +27,7 @@ The purpose of this project is to develop a web-based platform that helps hackat
 - **External:** Hackathon participants, organizers  
 
 ### Team Roles
-- **Project Managers (Rinad & Afnan):** Planning, coordination, tracking progress  
+- **Project Managers (Rinad):** Planning, coordination, tracking progress  
 - **Backend Developer (Rinad):** Database, APIs, backend logic, testing  
 - **Frontend Developer (Afnan):** UI development, API integration  
 - **Documentation Owner (Sarah):** Documentation, reports, data  
