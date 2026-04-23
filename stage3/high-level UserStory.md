@@ -19,7 +19,7 @@ As a participant, I want to view my past teams and hackathons, so that I can tra
 
 As a participant, I want to rate my team experience, so that platform quality improves.
 
-⸻
+⸻------------------------------------------------------------------------------------------------
 
 ## Persona 2: Team Leader (Team Creator)
 
@@ -40,7 +40,7 @@ As a team leader, I want to view my past teams and projects, so that I track my 
 
 As a team leader, I want to rate team members after the hackathon, so that collaboration quality improves.
 
-⸻
+⸻⸻--------------------------------------------------------------------------------------------
 
 ## Persona 3: Hackathon Organizer
 
@@ -58,7 +58,7 @@ As an organizer, I want to provide hackathon details (rules, timeline, prizes), 
 
 As an organizer, I want to highlight featured teams or ideas, so that engagement increases.
 
-⸻
+⸻⸻--------------------------------------------------------------------------------------------
 
 ## Persona 4: Admin (Platform Manager)
 
@@ -68,7 +68,7 @@ As an admin, I want to manage users (participants and team leaders), so that the
 As an admin, I want to monitor teams and hackathons, so that everything operates properly.
 As an admin, I want to handle reports or issues, so that user trust is maintained.
 
-⸻
+⸻⸻--------------------------------------------------------------------------------------------
 
 ## Won’t Have (Out of MVP Scope)
 
