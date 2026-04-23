@@ -1,11 +1,5 @@
 > .:
-# Class Diagram
-
-(Users, Teams, Chat, Hackathon)
----
-config:
-  theme: dark
----
+# Class Diagram (Users, Teams, Chat, Hackathon)
 classDiagram
 
 class User {
