@@ -1,5 +1,5 @@
 ```mermaid
-# System Architecture (Users, Teams, Chat, Hackathon)
+
 classDiagram
 
 %% =====================
