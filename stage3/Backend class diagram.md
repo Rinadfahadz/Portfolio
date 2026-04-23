@@ -1,4 +1,4 @@
-> .:
+```mermaid
 # System Architecture (Users, Teams, Chat, Hackathon)
 classDiagram
 
@@ -120,3 +120,4 @@ ChatService --> Database
 UserService --> AuthService
 ChatService --> RealtimeService
 NotificationService --> RealtimeService
+```
