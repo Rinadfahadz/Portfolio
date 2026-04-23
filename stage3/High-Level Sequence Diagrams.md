@@ -1,4 +1,6 @@
-# Use Case: Create Team & Join Hackathon
+# High Level Sequence Diagram
+
+## Use Case: Create Team & Join Hackathon
 ```mermaid
 
 sequenceDiagram
