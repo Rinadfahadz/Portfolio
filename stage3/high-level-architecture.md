@@ -1,8 +1,9 @@
 # MVP System Architecture
 ## High-Level Package Diagram (Three-Layer Architecture)
 
-''' mermaid
+```mermaid
 flowchart LR
+
     subgraph Client["Client Layer"]
         FE["Frontend UI<br/>(React.js)"]
     end
@@ -32,7 +33,7 @@ flowchart LR
 
     %% Backend ↔ Firebase
     BE <-->|"Verify JWT Token"| FIRE
-''' 
+```
 
 ## Architecture Overview
 The system is designed as a full-stack web platform following a Three-Layer Architecture. This structure ensures a clean separation of concerns between the user interface, business logic, and data persistence, with a specific focus on Data Integrity to support the platform's core "Idea Protection" feature.
