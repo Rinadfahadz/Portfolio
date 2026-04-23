@@ -24,3 +24,25 @@ sequenceDiagram
     API-->>Frontend: Success response
     Frontend-->>User: Show team created
 ```
+
+## Use Case: Join Request & Team Leader Respons
+```mermaid
+
+sequenceDiagram
+    participant Participant
+    participant Frontend
+    participant API
+    participant DB
+    participant Notification as Firebase
+
+    Participant->>Frontend: Send join request
+    Frontend->>API: POST /join-request
+
+    API->>DB: Save request (pending)
+    DB-->>API: Request stored
+
+    API->>Notification: Notify team leader
+    Notification-->>Frontend: Real-time update
+
+    API-->>Frontend: Request sent successfully
+```
