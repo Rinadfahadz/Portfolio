@@ -1,8 +1,13 @@
+> .:
+# Class Diagram
+
+(Users, Teams, Chat, Hackathon)
 ---
 config:
   theme: dark
 ---
 classDiagram
+
 class User {
   userId
   name
@@ -17,6 +22,7 @@ class User {
   +sendMessage()
   +viewTeams()
 }
+
 class Participant {
   skills
   portfolioLink
@@ -47,7 +53,11 @@ class Admin {
   +manageHackathons()
 }
 
+User <|-- Participant
+User <|-- TeamLeader
+User <|-- Organizer
 User <|-- Admin
+
 class Team {
   teamId
   name
@@ -61,6 +71,7 @@ class Team {
   +updateProjectIdea()
   +changeStatus()
 }
+
 class JoinRequest {
   requestId
   status
@@ -70,6 +81,7 @@ class JoinRequest {
   +cancelRequest()
   +updateStatus()
 }
+
 class Hackathon {
   hackathonId
   title
@@ -82,6 +94,7 @@ class Hackathon {
   +removeTeam()
   +updateDetails()
 }
+
 class Chat {
   chatId
   createdAt
@@ -100,6 +113,7 @@ class Message {
   +edit()
   +delete()
 }
+
 User --> Team
 User --> JoinRequest
 User --> Message
