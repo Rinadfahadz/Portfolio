@@ -1,7 +1,8 @@
 # MVP System Architecture
 ## High-Level Package Diagram (Three-Layer Architecture)
 
-### flowchart LR
+'''mermaid
+flowchart LR
 
     subgraph Client["Client Layer"]
         FE["Frontend UI<br/>(React.js)"]
