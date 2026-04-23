@@ -56,6 +56,7 @@ sequenceDiagram
     participant BE as Node.js Backend
     participant DB as MySQL Database
 
+```mermaid
     %% Login Flow
     User->>FE: Login with Credentials
     FE->>FB: Authenticate User
@@ -77,6 +78,7 @@ sequenceDiagram
     BE->>DB: INSERT INTO IdeaLogs (Message, Timestamp, UserID)
     DB-->>BE: Record Secured
     BE-->>FE: Message Verified & Logged
+```
 
 ### Architectural Principles
 Data Integrity & Traceability: By using MySQL, the system ensures strong relational links between users and their contributions. Every interaction is timestamped by the server (not the client) to prevent tampering with "Idea Ownership" records.
