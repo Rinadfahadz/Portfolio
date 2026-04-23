@@ -27,22 +27,21 @@ sequenceDiagram
 
 ## Use Case: Join Request & Team Leader Respons
 ```mermaid
-
 sequenceDiagram
-    participant Participant
-    participant Frontend as React Frontend
+    participant User
+    participant Frontend
     participant API
     participant DB
     participant Firebase
 
-    Participant->>Frontend: Send join request
+    User->>Frontend: Send join request
     Frontend->>API: POST /join-request
 
-    API->>DB: Save request (pending)
+    API->>DB: Save request
     DB-->>API: Request stored
 
-    API->>Notification: Notify team leader
-    Notification-->>Frontend: Real-time update
+    API->>Firebase: Notify team leader
+    Firebase-->>Frontend: Real-time update
 
     API-->>Frontend: Request sent successfully
 ```
