@@ -1,7 +1,7 @@
 # 🚀 Hackathon Team Formation Platform
 ## Stage 3: Technical Documentation
 
-> **Project Team:** Rinad (PM/Backend), Afnan (Frontend), Sarah (Docs)
+> **Project Team:** Rinad (Backend), Afnan (Frontend), Sarah (Docs)
 > **Status:** Stage 3 Complete (Technical Design)
 
 ---
@@ -25,8 +25,8 @@
 
 * **Frontend:** React.js (Component-based UI)
 * **Backend:** Node.js + Express (REST API)
-* **Database:** PostgreSQL (Relational data)
-* **Auth:** JWT (Secure Login)
+* **Database:** mySQL (Relational data)
+* **Auth:** Firebase (Secure Login)
 
 **High-Level Flow:**
 `User Interface (React) <--> API Gateway (Express) <--> Database (PostgreSQL)`
