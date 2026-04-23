@@ -1,4 +1,4 @@
-###Use Case: Create Team & Join Hackathon
+# Use Case: Create Team & Join Hackathon
 ```mermaid
 
 sequenceDiagram
