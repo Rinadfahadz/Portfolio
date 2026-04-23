@@ -1,7 +1,7 @@
 # 🚀 Hackathon Team Formation Platform
 ## Stage 3: Technical Documentation
 
-> **Project Team:** Rinad (Backend), Afnan (Frontend), Sarah (Docs)
+> **Project Team:** Rinad (PM\Backend), Afnan (Frontend), Sarah (Docs)
 > **Status:** Stage 3 Complete (Technical Design)
 
 ---
@@ -66,7 +66,7 @@
 <details>
 <summary><b>💡 6. Technical Justifications</b></summary>
 
-* **PostgreSQL:** Chosen for its ability to handle complex relational links between Users and Teams.
+* **mySQL:** Chosen for its ability to handle relational links between Users and Teams.
 * **Idea Protection:** The `IdeaLogs` table uses server-side timestamps to ensure users have proof of original concepts shared during the formation phase.
 </details>
 
