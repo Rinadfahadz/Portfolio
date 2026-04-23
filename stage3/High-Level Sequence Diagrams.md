@@ -33,7 +33,7 @@ sequenceDiagram
     participant Frontend
     participant API
     participant DB
-    participant Notification as Firebase
+    participant Firebase
 
     Participant->>Frontend: Send join request
     Frontend->>API: POST /join-request
