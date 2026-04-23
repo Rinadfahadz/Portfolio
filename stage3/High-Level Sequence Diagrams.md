@@ -30,7 +30,7 @@ sequenceDiagram
 
 sequenceDiagram
     participant Participant
-    participant Frontend
+    participant Frontend as React Frontend
     participant API
     participant DB
     participant Firebase
