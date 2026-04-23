@@ -1,8 +1,8 @@
-User Stories – Hackathon Teaming Platform
+# User Stories – Hackathon Teaming Platform
 
-Persona 1: Participant (Individual Looking for a Team)
+## Persona 1: Participant (Individual Looking for a Team)
 
-Must Have (MVP)
+### Must Have (MVP)
 
 As a participant, I want to create a personal profile with my skills (e.g., programming, design), so that teams can evaluate me.
 As a participant, I want to browse available teams looking for members, so that I can join a suitable team.
@@ -21,7 +21,7 @@ As a participant, I want to rate my team experience, so that platform quality im
 
 ⸻
 
-Persona 2: Team Leader (Team Creator)
+## Persona 2: Team Leader (Team Creator)
 
 Must Have (MVP)
 
@@ -42,7 +42,7 @@ As a team leader, I want to rate team members after the hackathon, so that colla
 
 ⸻
 
-Persona 3: Hackathon Organizer
+## Persona 3: Hackathon Organizer
 
 Must Have (MVP)
 
@@ -60,7 +60,7 @@ As an organizer, I want to highlight featured teams or ideas, so that engagement
 
 ⸻
 
-Persona 4: Admin (Platform Manager)
+## Persona 4: Admin (Platform Manager)
 
 Must Have (MVP)
 
