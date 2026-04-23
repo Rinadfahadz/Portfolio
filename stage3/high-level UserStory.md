@@ -1,4 +1,3 @@
-> .:
 User Stories – Hackathon Teaming Platform
 
 Persona 1: Participant (Individual Looking for a Team)
