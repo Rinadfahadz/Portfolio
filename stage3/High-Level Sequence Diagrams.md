@@ -45,3 +45,21 @@ sequenceDiagram
 
     API-->>Frontend: Request sent successfully
 ```
+
+##Use Case: Organizer Creates Hackathon
+```mermaid
+sequenceDiagram
+    participant Organizer
+    participant Frontend
+    participant API
+    participant DB
+
+    Organizer->>Frontend: Create Hackathon form
+    Frontend->>API: POST /hackathon
+
+    API->>DB: Save hackathon
+    DB-->>API: Created
+
+    API-->>Frontend: Success response
+    Frontend-->>Organizer: Hackathon published
+```
