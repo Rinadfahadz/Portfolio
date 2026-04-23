@@ -57,6 +57,7 @@ sequenceDiagram
     participant DB as MySQL Database
 
 ```mermaid
+sequenceDiagram
     %% Login Flow
     User->>FE: Login with Credentials
     FE->>FB: Authenticate User
