@@ -64,9 +64,9 @@ flowchart LR
 
     A[User] --> B[React Frontend]
 
-    B -->|HTTP Requests (JSON)| C[Node.js + Express Backend]
+    B -->|HTTP Requests (JSON)| C[Node.js Express Backend]
 
-    C -->|Authentication (JWT + bcrypt)| D[Auth System]
+    C -->|Authentication JWT bcrypt| D[Auth System]
 
     C -->|CRUD Operations| E[MySQL Database]
 
@@ -78,7 +78,7 @@ flowchart LR
 
     B -->|UI Update| A
 
-    C -->|Store Ideas / Messages| F[IdeaLogs Table]
+    C -->|Store Ideas Messages| F[IdeaLogs Table]
 
     F -->|Timestamped Records| C
 ```
