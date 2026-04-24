@@ -14,3 +14,11 @@ The system uses RESTful APIs built with Node.js and Express. All data is exchang
 |-----------|--------|-------|--------|
 | /api/auth/register | POST | { username, email, password } | { message, userId } |
 | /api/auth/login | POST | { email, password } | { token, user } |
+
+## User APIs
+| End Point | Method | Input | Output |
+|-----------|--------|-------|--------|
+| /api/users | GET | - | [ { user data } ] |
+| /api/users/:id | GET | userId (param) | { user details } |
+| /api/users/:id | PUT | { updated fields } | { success message } |
+
