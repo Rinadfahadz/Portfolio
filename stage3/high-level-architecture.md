@@ -77,3 +77,4 @@ Auth-->>Backend: Token (JWT)
 Backend-->>Frontend: Login success + token
 Frontend-->>User: Show dashboard
 ```
+The system follows a structured data flow where the user interacts with the React frontend, which sends HTTP JSON requests to the Node.js backend that processes the requests, handles authentication using JWT and bcrypt when required, communicates with the MySQL database to store or retrieve data, and returns a JSON response back to the frontend to update the user interface accordingly while storing idea-related messages in the IdeaLogs table with server-side timestamps for traceability.
