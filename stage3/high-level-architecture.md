@@ -27,56 +27,25 @@ flowchart LR
 ```
 
 ## Architecture Overview
-The system is designed as a full-stack web platform following a Three-Layer Architecture. This structure ensures a clean separation of concerns between the user interface, business logic, and data persistence, with a specific focus on Data Integrity to support the platform's core "Idea Protection" feature.
+The system follows a layered architecture consisting of a client layer (React frontend), a server layer (Node.js and Express backend), and a data layer (MySQL database). The frontend communicates with the backend using HTTP requests in JSON format. The backend processes requests, applies business logic, and handles authentication using JWT and bcrypt. It performs CRUD operations on the database for managing users, teams, requests, and idea logs. The system is designed as a monolithic architecture to ensure simplicity and efficient development for the MVP.
 
 ### System Components
 | Component | Technology | Description |
 |----------|------------|-------------|
-| Frontend | React.js | A responsive Single Page Application (SPA) where participants manage profiles, browse teams, and interact with the matching system. |
-| Backend | Node.js (Express) | The central logic hub responsible for skill-matching algorithms, request validation, and secure communication. |
-| Primary Database | MySQL | A relational database used to store structured data including User Profiles, Team Structures, and Membership Statuses. |
-| Idea Protection | IdeaLogs (MySQL) | A specialized table within MySQL that records every chat message with a server-side timestamp to provide an immutable record of original ideas. |
-| Authentication | Firebase Auth | Handles secure user registration and login, providing JWT tokens for session management. |
-
-### Data Flow
-The following sequence diagram illustrates the process of "Joining a Team" and the "Idea Protection" mechanism during communication:
-sequenceDiagram
-    participant User as Participant
-    participant FE as React Frontend
-    participant FB as Firebase Auth
-    participant BE as Node.js Backend
-    participant DB as MySQL Database
-
-```mermaid
-sequenceDiagram
-    %% Login Flow
-    User->>FE: Login with Credentials
-    FE->>FB: Authenticate User
-    FB-->>FE: Return Auth Token (JWT)
-
-    %% Join Team Flow
-    User->>FE: Click "Join Team"
-    FE->>BE: POST /api/requests (Token + TeamID)
-    BE->>FB: Verify Token Validity
-    BE->>DB: Check Eligibility & Skill Alignment
-    DB-->>BE: Status OK
-    BE->>DB: INSERT JoinRequest (Status: Pending)
-    BE-->>FE: Request Sent Successfully
-
-    %% Idea Protection Flow
-    User->>FE: Share Idea in Team Chat
-    FE->>BE: POST /api/chat (Message Content)
-    Note over BE, DB: Automatic Server-Side Timestamping
-    BE->>DB: INSERT INTO IdeaLogs (Message, Timestamp, UserID)
-    DB-->>BE: Record Secured
-    BE-->>FE: Message Verified & Logged
-```
+| Frontend | React.js | A responsive Single Page Application (SPA) where participants manage profiles, browse teams, create teams, and send join requests. It communicates with the backend through RESTful API calls. |
+| Backend | Node.js | The core system layer responsible for handling business logic such as team creation, join requests, matching logic, and data validation. It processes all client requests and communicates with the database. |
+| Primary Database | MySQL | A relational database used to store structured data including user profiles, teams, join requests, and membership relationships with proper relational integrity. |
+| Idea Protection | IdeaLogs (MySQL) | A dedicated database table that stores chat messages and shared ideas with server-side timestamps, ensuring traceability and providing evidence of idea ownership within teams. |
+| Authentication | JWT + bcrypt | Handles secure user authentication using email and password. Passwords are hashed using bcrypt, and JWT tokens are generated upon login to manage user sessions and secure API endpoints. |
 
 ### Architectural Principles
-Data Integrity & Traceability: By using MySQL, the system ensures strong relational links between users and their contributions. Every interaction is timestamped by the server (not the client) to prevent tampering with "Idea Ownership" records.
+Simplicity: The architecture is intentionally kept simple using a monolithic structure. This reduces development complexity, accelerates delivery, and ensures the team can focus on core features such as team formation, authentication, and matching logic.
 
-Security First: Every API endpoint is protected. No user can create a team or view private logs without a verified Firebase token checked against the backend.
+Scalability: Although the MVP uses a monolithic structure, the system is designed in modular components (authentication, teams, requests, matching). This allows future migration into microservices if the system grows in usage or complexity.
 
-Separation of Concerns: The Frontend handles presentation, the Backend handles logic/security, and the Data Layer handles persistence, making the system easier to debug and scale.
-
-Extensibility: The RESTful design allows the team to easily integrate future features like a Mobile App or GitHub Portfolio integrations without rewriting the core backend.
+Security by Design: 
+Security is embedded into the architecture through:
+- Password hashing using bcrypt
+- Authentication using JWT tokens
+- Protected API endpoints requiring valid tokens
+- Input validation on backend requests
