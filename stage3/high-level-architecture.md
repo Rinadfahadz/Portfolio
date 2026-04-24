@@ -2,37 +2,18 @@
 ## High-Level Package Diagram (Three-Layer Architecture)
 
 ```mermaid
-flowchart LR
+flowchart TD
+    A[User (Browser)]
+    B[React Frontend]
+    C[Node.js + Express Backend]
+    D[MySQL Database]
 
-    subgraph Client["Client Layer"]
-        FE["Frontend UI<br/>(React.js)"]
-    end
-
-    subgraph Server["Server Layer"]
-        BE["Backend API<br/>(Node.js + Express)"]
-    end
-
-    subgraph Data["Data Layer"]
-        DB[(MySQL Database<br/>Profiles, Teams, Requests)]
-        IL[(IdeaLogs Table<br/>Timestamped Chat Records)]
-    end
-
-    subgraph Auth["Security & Identity"]
-        FIRE["Firebase Auth<br/>Secure Authentication"]
-    end
-
-    %% Client ↔ Backend
-    FE <-->|"REST API / JSON"| BE
-
-    %% Backend ↔ MySQL
-    BE <-->|"Sequelize / CRUD Operations"| DB
-    BE <-->|"Immutable Logging"| IL
-
-    %% Client ↔ Firebase
-    FE <-->|"Token-based Login"| FIRE
-
-    %% Backend ↔ Firebase
-    BE <-->|"Verify JWT Token"| FIRE
+    A -->|User Interaction| B
+    B -->|HTTP Request (JSON)| C
+    C -->|Query / Store Data| D
+    D -->|Data Response| C
+    C -->|JSON Response| B
+    B -->|Display Data| A
 ```
 
 ## Architecture Overview
