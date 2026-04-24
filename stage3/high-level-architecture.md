@@ -55,3 +55,30 @@ The system minimizes unnecessary external dependencies and uses direct backend p
 
 Traceability:
 Idea protection is implemented through timestamped logs stored in the database. This ensures transparency and accountability in collaborative environments.
+
+## Data Flow
+The system follows a structured data flow that ensures smooth communication between the frontend, backend, and database layers.
+
+```mermaid
+flowchart LR
+
+    A[User] --> B[React Frontend]
+
+    B -->|HTTP Requests (JSON)| C[Node.js + Express Backend]
+
+    C -->|Authentication (JWT + bcrypt)| D[Auth System]
+
+    C -->|CRUD Operations| E[MySQL Database]
+
+    E -->|Query Result| C
+
+    D -->|Token Verification| C
+
+    C -->|JSON Response| B
+
+    B -->|UI Update| A
+
+    C -->|Store Ideas / Messages| F[IdeaLogs Table]
+
+    F -->|Timestamped Records| C
+```
