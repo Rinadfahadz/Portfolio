@@ -60,25 +60,20 @@ Idea protection is implemented through timestamped logs stored in the database. 
 The system follows a structured data flow that ensures smooth communication between the frontend, backend, and database layers.
 
 ```mermaid
-flowchart LR
+sequenceDiagram
 
-    A[User] --> B[React Frontend]
+participant User
+participant Frontend
+participant Backend
+participant Auth
+participant DB
 
-    B -->|HTTP Requests (JSON)| C[Node.js Express Backend]
-
-    C -->|Authentication JWT bcrypt| D[Auth System]
-
-    C -->|CRUD Operations| E[MySQL Database]
-
-    E -->|Query Result| C
-
-    D -->|Token Verification| C
-
-    C -->|JSON Response| B
-
-    B -->|UI Update| A
-
-    C -->|Store Ideas Messages| F[IdeaLogs Table]
-
-    F -->|Timestamped Records| C
+User->>Frontend: Enter email & password
+Frontend->>Backend: POST /login (credentials)
+Backend->>Auth: Validate password (bcrypt)
+Auth->>DB: Get user data
+DB-->>Auth: User record
+Auth-->>Backend: Token (JWT)
+Backend-->>Frontend: Login success + token
+Frontend-->>User: Show dashboard
 ```
