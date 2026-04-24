@@ -15,10 +15,18 @@ The system uses RESTful APIs built with Node.js and Express. All data is exchang
 | /api/auth/register | POST | { username, email, password } | { message, userId } |
 | /api/auth/login | POST | { email, password } | { token, user } |
 
-## User APIs
+### User APIs
 | End Point | Method | Input | Output |
 |-----------|--------|-------|--------|
 | /api/users | GET | - | [ { user data } ] |
 | /api/users/:id | GET | userId (param) | { user details } |
 | /api/users/:id | PUT | { updated fields } | { success message } |
 
+### Team APIs
+| End Point | Method | Input | Output |
+|-----------|--------|-------|--------|
+| /api/teams | Get | - | [ { teams list } ] |
+| /api/teams | POST | { name, description, required_roles } | { team created } |
+| /api/teams/:id | GET | teamId | { team details } |
+
+### Join Request APIs
