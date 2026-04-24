@@ -49,3 +49,9 @@ Security is embedded into the architecture through:
 - Authentication using JWT tokens
 - Protected API endpoints requiring valid tokens
 - Input validation on backend requests
+
+Performance Efficiency:
+The system minimizes unnecessary external dependencies and uses direct backend processing for core logic. This reduces latency and improves response time between frontend and backend interactions.
+
+Traceability:
+Idea protection is implemented through timestamped logs stored in the database. This ensures transparency and accountability in collaborative environments.
