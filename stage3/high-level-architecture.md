@@ -3,36 +3,27 @@
 
 ```mermaid
 flowchart LR
-
     subgraph Client["Client Layer"]
-        FE["Frontend UI<br/>(React.js)"]
+        FE["Frontend<br/>(React)"]
     end
 
     subgraph Server["Server Layer"]
-        BE["Backend API<br/>(Node.js + Express)"]
+        BE["Backend<br/>(Node.js + Express)"]
+        AUTH["Authentication<br/>(JWT + bcrypt)"]
     end
 
     subgraph Data["Data Layer"]
-        DB[(MySQL Database<br/>Profiles, Teams, Requests)]
-        IL[(IdeaLogs Table<br/>Timestamped Chat Records)]
-    end
-
-    subgraph Auth["Security & Identity"]
-        FIRE["Firebase Auth<br/>Secure Authentication"]
+        DB[(MySQL Database)]
     end
 
     %% Client ↔ Backend
-    FE <-->|"REST API / JSON"| BE
+    FE <-->|"HTTP Requests / JSON"| BE
 
-    %% Backend ↔ MySQL
-    BE <-->|"Sequelize / CRUD Operations"| DB
-    BE <-->|"Immutable Logging"| IL
+    %% Backend ↔ Authentication
+    BE <-->|"Login / Register<br/>Token Generation"| AUTH
 
-    %% Client ↔ Firebase
-    FE <-->|"Token-based Login"| FIRE
-
-    %% Backend ↔ Firebase
-    BE <-->|"Verify JWT Token"| FIRE
+    %% Backend ↔ Database
+    BE <-->|"CRUD Operations<br/>(Users, Teams, Requests, IdeaLogs)"| DB
 ```
 
 ## Architecture Overview
