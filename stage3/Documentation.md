@@ -30,3 +30,14 @@ The system uses RESTful APIs built with Node.js and Express. All data is exchang
 | /api/teams/:id | GET | teamId | { team details } |
 
 ### Join Request APIs
+| End Point | Method | Input | Output |
+|-----------|--------|-------|--------|
+| /api/requests | POST | { userId, teamId } | { request status } |
+| /api/requests/:id | PUT | { status: accepted/rejected } | { updated request } |
+| /api/requests/team/:teamId | GET | teamId | [ requests list ] |
+
+### Idea Protection APIs
+| End Point | Method | Input | Output |
+|-----------|--------|-------|--------|
+| /api/ideas | POST | { teamId, userId, message } | { saved message with timestamp } |
+| /api/ideas/:teamId | GET | teamId | [ idea logs ] |
