@@ -1,0 +1,150 @@
+Project Name
+Hackathon Team Formation Platform
+
+Purpose
+The purpose of this task is to detail the internal structure of the system components, including the back-end logic, database design, and front-end user interface components for the MVP.
+
+System Components
+The system is composed of three main components:
+
+Back-End: Handles business logic and application rules.
+Database: Stores all application data.
+Front-End: Provides the user interface and user interaction.
+
+
+Back-End: Key Classes
+Class: User
+Represents a hackathon participant.
+Attributes:
+
+userId
+name
+email
+password
+skills
+preferredRole
+experienceLevel
+availabilityStatus
+
+Methods:
+
+register()
+login()
+updateProfile()
+updateAvailability()
+
+
+Class: Team
+Represents a hackathon team.
+Attributes:
+
+teamId
+teamName
+description
+requiredRoles
+createdBy
+members
+
+Methods:
+
+createTeam()
+addMember()
+removeMember()
+viewTeamDetails()
+
+
+Class: JoinRequest
+Represents requests sent by users to join teams.
+Attributes:
+
+requestId
+userId
+teamId
+status (pending / accepted / rejected)
+requestDate
+
+Methods:
+
+sendRequest()
+acceptRequest()
+rejectRequest()
+
+
+Class: IdeaLog
+Supports the idea protection feature.
+Attributes:
+
+logId
+teamId
+ideaContent
+createdBy
+timestamp
+
+Methods:
+
+logIdea()
+viewIdeaHistory()
+
+
+Database Design (Document-Oriented – MongoDB)
+Collection: users
+{
+  "userId": "string",
+  "name": "string",
+  "email": "string",
+  "password": "string",
+  "skills": ["string"],
+  "preferredRole": "string",
+  "experienceLevel": "string",
+  "availabilityStatus": "boolean"
+}
+Mandatory fields: userId, email, password
+Optional fields: skills, experienceLevel, availabilityStatus
+
+Collection: teams
+{
+  "teamId": "string",
+  "teamName": "string",
+  "description": "string",
+  "requiredRoles": ["string"],
+  "createdBy": "userId",
+  "members": ["userId"]
+}
+
+Collection: joinRequests
+{
+  "requestId": "string",
+  "userId": "string",
+  "teamId": "string",
+  "status": "pending | accepted | rejected",
+  "requestDate": "date"
+}
+
+Collection: ideaLogs
+{
+  "logId": "string",
+  "teamId": "string",
+  "ideaContent": "string",
+  "createdBy": "userId",
+  "timestamp": "date"
+}
+
+Entity Relationships (ERD – Text Description)
+
+One user can create multiple teams
+A user can send multiple join requests
+A team can have multiple members
+A team can have multiple idea logs
+
+
+Front-End Components
+
+Login and Registration pages
+User Profile page
+Team Creation page
+Team Discovery page
+Team Details page
+Join Request management interface
+Idea logging interface
+ERD Diagram (PlantUML):
+https://www.plantuml.com/plantuml/svg/bPNDRjGm4CVlUGfhBwHyL72jKDMg8BMeXQejvvKtdjsrYEtWcQHKY2iFW7X2deGuZfL9TecMFO3cOtwP-MScFKEIdcfJPaKf4SLd12--PqAyq9P4tLfBhOA9vBNT22iDC1ECr2MpAuduw7nNSQsHtaR_gS0lkYoHPtfOW_UWbjwL8-It2hm6My2oX0OuNJPIbtAbIqrFmQqa0Ma3el0WgKL9oe8_chVUhNK9-L5mrPMQkbRUFI8yW3GO7GXMVN3Qti7N6f1oQaFjz5tCG-KyNIcG3rjOKnxjBleZwxKBg46xMCsqYvw9W0gmyBeYxUoEPhxjGoU5C77JhAi390WTiVcPBPMw0RC2dyTtdAOqhe6zWKR38nV7n__RX9S2ILADJ0cME0WoL4pNQrSniBNfiNDJOhqocb9BRD3xhZHdBLri9Tq0ejp0q9A93jP3s85zJR5NLZXBO6dKL_W7IPegIulKFoisjG6wSBO1ZpAywKkDvFnJMZ3MPLYmkx1QNBUqQcF7g4jP53M2sjytdxIxEh35p0x-f_QXbtdfpvNHTfX71lE0hygmT_4XxEPY25tPm3kDLKqm2OOghlYrs-18xcVYrRz-RIp-xjvVdpzSVVfuVtbrUpzN4N3TX_FFpz_nAv2RxePmgwkZh0ijtYnQW5YyFZv-leX99o9cBTsQ4NwDhgUxmcuhCHqGZeYd2SchJlgAqy0DpzhbKl1wA40tmD4XUnQTYgPqVc2HlfMOzcu_cDTm1RYVAy1e8NM6nXLWN7PUURgYlIoUUI9IwWojFy03O7rcPCNJcCBYrhTJnl0ShKyDj3EmAlmX_mi0
