@@ -1,8 +1,8 @@
-```mermaid
+```mermaid 
 erDiagram
 
 USER {
-  int user_id PK
+  int user_id
   string name
   string skills
   int participations
@@ -10,62 +10,64 @@ USER {
 }
 
 TEAM {
-  int team_id PK
+  int team_id
   string name
   string idea
-  int owner_id FK
-  int hackathon_id FK
+  int owner_id
+  int hackathon_id
 }
 
 HACKATHON {
-  int hackathon_id PK
+  int hackathon_id
   string name
   string description
 }
 
 REQUEST {
-  int request_id PK
-  int sender_id FK
-  int receiver_user_id FK
-  int receiver_team_id FK
+  int request_id
+  int sender_id
+  int receiver_user_id
+  int receiver_team_id
   string type
   string status
   datetime created_at
 }
 
 CHATROOM {
-  int chat_id PK
+  int chat_id
   datetime created_at
 }
 
 MESSAGE {
-  int message_id PK
-  int chat_id FK
-  int sender_id FK
+  int message_id
+  int chat_id
+  int sender_id
   string content
   datetime timestamp
 }
 
 RATING {
-  int rating_id PK
-  int rater_id FK
-  int rated_user_id FK
+  int rating_id
+  int rater_id
+  int rated_user_id
   int value
   string comment
   datetime created_at
 }
 
 TEAM_MEMBER {
-  int user_id FK
-  int team_id FK
+  int user_id
+  int team_id
 }
 
 CHAT_PARTICIPANT {
-  int chat_id FK
-  int user_id FK
+  int chat_id
+  int user_id
 }
 
-%% العلاقات
+%% =====================
+%% Relationships
+%% =====================
 
 USER ||--o{ TEAM : owns
 HACKATHON ||--o{ TEAM : contains
