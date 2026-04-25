@@ -19,7 +19,7 @@
 * **Matching:** Filtered list of teams based on user skills.
 * **Notifications:** Alerts for accepted/rejected requests.
 </details>
-
+  
 <details>
 <summary><b>🏗️ 2. System Architecture & Tech Stack</b></summary>
 
