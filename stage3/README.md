@@ -1,4 +1,4 @@
-# 🚀 Hackathon Team Formation Platform
+# Hackathon Team Formation Platform
 ## Stage 3: Technical Documentation
 
 > **Project Team:** Rinad (PM\Backend), Afnan (Frontend), Sarah (Docs)
@@ -7,7 +7,7 @@
 ---
 
 <details>
-<summary><b>🎯 1. User Stories & MoSCoW Prioritization</b></summary>
+<summary><b> 1. User Stories & MoSCoW Prioritization</b></summary>
 
 ### **Must Have (MVP)**
 * **Profile Management:** Users can list skills and roles.
@@ -21,7 +21,7 @@
 </details>
   
 <details>
-<summary><b>🏗️ 2. System Architecture & Tech Stack</b></summary>
+<summary><b> 2. System Architecture & Tech Stack</b></summary>
 
 * **Frontend:** React.js (Component-based UI)
 * **Backend:** Node.js + Express (REST API)
@@ -33,7 +33,7 @@
 </details>
 
 <details>
-<summary><b>💾 3. Database Schema</b></summary>
+<summary><b> 3. Database Schema</b></summary>
 
 | Table | Key Fields |
 | :--- | :--- |
@@ -55,7 +55,7 @@
 </details>
 
 <details>
-<summary><b>🛡️ 5. SCM & QA Strategy</b></summary>
+<summary><b> 5. SCM & QA Strategy</b></summary>
 
 * **Branching Strategy:**
 * `main` (Stable production-ready code only)
@@ -100,7 +100,7 @@
 </details>
 
 <details>
-<summary><b>💡 6. Technical Justifications</b></summary>
+<summary><b> 6. Technical Justifications</b></summary>
 
 * **MySQL:** Chosen for its strong support of relational data, which fits the system structure where Users, Teams, and Hackathon entities are highly interconnected. It ensures data consistency through foreign keys and supports complex queries for team management and participation tracking.
 
