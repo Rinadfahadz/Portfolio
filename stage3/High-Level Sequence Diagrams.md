@@ -7,16 +7,16 @@ sequenceDiagram
     participant User as Participant
     participant Frontend as React Frontend
     participant API as Node.js Backend
-    participant Auth as Firebase Auth
+    participant Auth as Auth Service (Email/Password + JWT)
     participant DB as MySQL
 
     User->>Frontend: Create Team form
-    Frontend->>Auth: Verify token
-    Auth-->>Frontend: Token valid
+    Frontend->>Auth: Login (email & password)
+    Auth-->>Frontend: JWT token issued
 
-    Frontend->>API: POST /teams
-    API->>Auth: Verify token
-    Auth-->>API: Authenticated
+    Frontend->>API: POST /teams (with JWT)
+    API->>Auth: Verify JWT token
+    Auth-->>API: Token valid
 
     API->>DB: Insert new team
     DB-->>API: Team created
