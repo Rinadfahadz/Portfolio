@@ -44,7 +44,7 @@
 </details>
 
 <details>
-<summary><b>🔌 4. Core API Endpoints</b></summary>
+<summary><b> 4. Core API Endpoints</b></summary>
 
 | Method | Endpoint | Action |
 | :--- | :--- | :--- |
