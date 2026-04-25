@@ -32,16 +32,16 @@ sequenceDiagram
     participant Frontend
     participant API
     participant DB
-    participant Firebase
+    participant Socket as WebSocket / Socket.IO
 
     User->>Frontend: Send join request
-    Frontend->>API: POST /join-request
+    Frontend->>API: POST /join-request (JWT)
 
     API->>DB: Save request
     DB-->>API: Request stored
 
-    API->>Firebase: Notify team leader
-    Firebase-->>Frontend: Real-time update
+    API->>Socket: Emit event to team leader
+    Socket-->>Frontend: Real-time update
 
     API-->>Frontend: Request sent successfully
 ```
