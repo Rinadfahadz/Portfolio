@@ -1,4 +1,3 @@
-```mermaid 
 erDiagram
 
 USER {
@@ -87,4 +86,4 @@ TEAM ||--o{ TEAM_MEMBER : has
 
 CHATROOM ||--o{ CHAT_PARTICIPANT : has
 USER ||--o{ CHAT_PARTICIPANT : joins
-```
+
