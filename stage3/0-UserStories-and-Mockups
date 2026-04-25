@@ -1,0 +1,42 @@
+Purpose
+The purpose of this task is to identify and prioritize the core functionalities of the MVP from the user’s perspective and to visualize its interface where applicable.
+
+User Stories (MoSCoW Prioritization)
+Must Have
+
+As a hackathon participant, I want to create a profile with my skills and preferred role, so that teams can easily find suitable members.
+As a team leader, I want to create a team and define required roles, so that I can fill missing positions quickly.
+As a user, I want to browse available teams and participants, so that I can choose the best match.
+As a team member, I want to view team composition, so that I know which roles are filled.
+
+Should Have
+
+As a user, I want to send join requests to teams, so that team formation is organized.
+As a team leader, I want to accept or reject join requests, so that my team remains balanced.
+As a user, I want to update my availability status, so that others know if I am open to joining.
+
+Could Have
+
+As a user, I want to receive suggested teams or members based on skills, so that team formation becomes faster.
+As a user, I want to chat with teammates, so that communication is easier.
+As a user, I want to receive notifications for new requests or matches, so that I stay informed.
+
+
+ Won’t Have (Out of Scope for MVP)
+
+As a user, I want advanced AI personality matching, so that teams are perfectly optimized.
+As a user, I want detailed post-hackathon ratings and analytics.
+
+
+Mockups
+The MVP includes a user interface.
+Mockups were created using Figma to visualize the main screens, including:
+
+User profile creation
+Team creation and discovery
+Team management
+MVP feature prioritization
+
+The mockups focus on layout and user flow rather than final visual design.
+Figma Mockups Link:
+https://www.figma.com/board/gjZqmkUfea13ITTWEoQmJW/Untitled?node-id=0-1&t=ALLwlQlhLQpgnHgZ-1
