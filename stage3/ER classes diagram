@@ -1,0 +1,88 @@
+```mermaid
+erDiagram
+
+USER {
+  int user_id PK
+  string name
+  string skills
+  int participations
+  int wins
+}
+
+TEAM {
+  int team_id PK
+  string name
+  string idea
+  int owner_id FK
+  int hackathon_id FK
+}
+
+HACKATHON {
+  int hackathon_id PK
+  string name
+  string description
+}
+
+REQUEST {
+  int request_id PK
+  int sender_id FK
+  int receiver_user_id FK
+  int receiver_team_id FK
+  string type
+  string status
+  datetime created_at
+}
+
+CHATROOM {
+  int chat_id PK
+  datetime created_at
+}
+
+MESSAGE {
+  int message_id PK
+  int chat_id FK
+  int sender_id FK
+  string content
+  datetime timestamp
+}
+
+RATING {
+  int rating_id PK
+  int rater_id FK
+  int rated_user_id FK
+  int value
+  string comment
+  datetime created_at
+}
+
+TEAM_MEMBER {
+  int user_id FK
+  int team_id FK
+}
+
+CHAT_PARTICIPANT {
+  int chat_id FK
+  int user_id FK
+}
+
+%% العلاقات
+
+USER ||--o{ TEAM : owns
+HACKATHON ||--o{ TEAM : contains
+
+USER ||--o{ REQUEST : sends
+USER ||--o{ REQUEST : receives
+TEAM ||--o{ REQUEST : receives
+
+CHATROOM ||--o{ MESSAGE : contains
+USER ||--o{ MESSAGE : sends
+
+USER ||--o{ RATING : gives
+USER ||--o{ RATING : receives
+
+USER ||--o{ TEAM_MEMBER : joins
+TEAM ||--o{ TEAM_MEMBER : has
+
+CHATROOM ||--o{ CHAT_PARTICIPANT : has
+USER ||--o{ CHAT_PARTICIPANT : joins
+```
