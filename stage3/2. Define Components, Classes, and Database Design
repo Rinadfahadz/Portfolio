@@ -1,150 +1,76 @@
-Project Name
-Hackathon Team Formation Platform
+Sure 
+Here is the complete rewritten version in clear, academic English, ready to use directly in your project or report:
 
-Purpose
-The purpose of this task is to detail the internal structure of the system components, including the back-end logic, database design, and front-end user interface components for the MVP.
+Back-End: Key Class (New)
+Class: Hackathon
+The Hackathon class represents a hackathon event within the system. It is the main entity under which teams are created, users participate, and collaboration takes place during a defined time period.
+Attributes
 
-System Components
-The system is composed of three main components:
-
-Back-End: Handles business logic and application rules.
-Database: Stores all application data.
-Front-End: Provides the user interface and user interaction.
-
-
-Back-End: Key Classes
-Class: User
-Represents a hackathon participant.
-Attributes:
-
-userId
-name
-email
-password
-skills
-preferredRole
-experienceLevel
-availabilityStatus
-
-Methods:
-
-register()
-login()
-updateProfile()
-updateAvailability()
-
-
-Class: Team
-Represents a hackathon team.
-Attributes:
-
-teamId
-teamName
+hackathonId
+title
 description
-requiredRoles
-createdBy
-members
+startDate
+endDate
+location (Online / Onsite / City)
+organizer
+maxTeamSize
+skillsFocus (e.g., AI, Web, Cybersecurity)
+status (upcoming / ongoing / completed)
+createdAt
 
-Methods:
+Methods
 
-createTeam()
-addMember()
-removeMember()
-viewTeamDetails()
-
-
-Class: JoinRequest
-Represents requests sent by users to join teams.
-Attributes:
-
-requestId
-userId
-teamId
-status (pending / accepted / rejected)
-requestDate
-
-Methods:
-
-sendRequest()
-acceptRequest()
-rejectRequest()
+createHackathon()
+updateHackathon()
+viewHackathonDetails()
+listTeams()
+isRegistrationOpen()
 
 
-Class: IdeaLog
-Supports the idea protection feature.
-Attributes:
-
-logId
-teamId
-ideaContent
-createdBy
-timestamp
-
-Methods:
-
-logIdea()
-viewIdeaHistory()
-
-
-Database Design (Document-Oriented – MongoDB)
-Collection: users
+ Database Design (MongoDB)
+Collection: hackathons
 {
-  "userId": "string",
-  "name": "string",
-  "email": "string",
-  "password": "string",
-  "skills": ["string"],
-  "preferredRole": "string",
-  "experienceLevel": "string",
-  "availabilityStatus": "boolean"
+  "hackathonId": "string",
+  "title": "string",
+  "description": "string",
+  "startDate": "date",
+  "endDate": "date",
+  "location": "string",
+  "organizer": "string",
+  "maxTeamSize": "number",
+  "skillsFocus": ["string"],
+  "status": "upcoming | ongoing | completed",
+  "createdAt": "date"
 }
-Mandatory fields: userId, email, password
-Optional fields: skills, experienceLevel, availabilityStatus
 
-Collection: teams
+Mandatory Fields
+
+hackathonId
+title
+startDate
+endDate
+
+Optional Fields
+
+location
+skillsFocus
+maxTeamSize
+
+
+Updates on Existing Collections
+Collection: teams (Updated)
 {
   "teamId": "string",
+  "hackathonId": "string",
   "teamName": "string",
   "description": "string",
-  "requiredRoles": ["string"],
-  "createdBy": "userId",
-  "members": ["userId"]
-}
+  "requiredRoles":
+ Entity Relationships (Updated)
 
-Collection: joinRequests
-{
-  "requestId": "string",
-  "userId": "string",
-  "teamId": "string",
-  "status": "pending | accepted | rejected",
-  "requestDate": "date"
-}
+One Hackathon can have multiple Teams
+Each Team belongs to one Hackathon
+A User can participate in multiple Hackathons
+Teams can only be created within a specific Hackathon
 
-Collection: ideaLogs
-{
-  "logId": "string",
-  "teamId": "string",
-  "ideaContent": "string",
-  "createdBy": "userId",
-  "timestamp": "date"
-}
-
-Entity Relationships (ERD – Text Description)
-
-One user can create multiple teams
-A user can send multiple join requests
-A team can have multiple members
-A team can have multiple idea logs
-
-
-Front-End Components
-
-Login and Registration pages
-User Profile page
-Team Creation page
-Team Discovery page
-Team Details page
-Join Request management interface
-Idea logging interface
 ERD Diagram (PlantUML):
 https://www.plantuml.com/plantuml/svg/bPNDRjGm4CVlUGfhBwHyL72jKDMg8BMeXQejvvKtdjsrYEtWcQHKY2iFW7X2deGuZfL9TecMFO3cOtwP-MScFKEIdcfJPaKf4SLd12--PqAyq9P4tLfBhOA9vBNT22iDC1ECr2MpAuduw7nNSQsHtaR_gS0lkYoHPtfOW_UWbjwL8-It2hm6My2oX0OuNJPIbtAbIqrFmQqa0Ma3el0WgKL9oe8_chVUhNK9-L5mrPMQkbRUFI8yW3GO7GXMVN3Qti7N6f1oQaFjz5tCG-KyNIcG3rjOKnxjBleZwxKBg46xMCsqYvw9W0gmyBeYxUoEPhxjGoU5C77JhAi390WTiVcPBPMw0RC2dyTtdAOqhe6zWKR38nV7n__RX9S2ILADJ0cME0WoL4pNQrSniBNfiNDJOhqocb9BRD3xhZHdBLri9Tq0ejp0q9A93jP3s85zJR5NLZXBO6dKL_W7IPegIulKFoisjG6wSBO1ZpAywKkDvFnJMZ3MPLYmkx1QNBUqQcF7g4jP53M2sjytdxIxEh35p0x-f_QXbtdfpvNHTfX71lE0hygmT_4XxEPY25tPm3kDLKqm2OOghlYrs-18xcVYrRz-RIp-xjvVdpzSVVfuVtbrUpzN4N3TX_FFpz_nAv2RxePmgwkZh0ijtYnQW5YyFZv-leX99o9cBTsQ4NwDhgUxmcuhCHqGZeYd2SchJlgAqy0DpzhbKl1wA40tmD4XUnQTYgPqVc2HlfMOzcu_cDTm1RYVAy1e8NM6nXLWN7PUURgYlIoUUI9IwWojFy03O7rcPCNJcCBYrhTJnl0ShKyDj3EmAlmX_mi0
