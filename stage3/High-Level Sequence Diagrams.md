@@ -32,7 +32,7 @@ sequenceDiagram
     participant Frontend
     participant API
     participant DB
-    participant Socket as WebSocket / Socket.IO
+    participant Socket as  Socket.IO
 
     User->>Frontend: Send join request
     Frontend->>API: POST /join-request (JWT)
